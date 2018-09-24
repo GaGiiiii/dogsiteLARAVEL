@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       @include('includes/messages')
-      <form method="POST" action="{{ route('register') }}" id="contact_form">
+      <form method="POST" action="{{ route('register') }}" id="contact_form" enctype="multipart/form-data">
         @csrf
         <div class="col-md-12">        
           <input id="name_input" placeholder="Name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -42,6 +42,9 @@
         <div class="col-md-12">        
           <input id="password-confirm" placeholder="Confirm Password" type="password" name="password_confirmation" required>
           {{-- (name, value, 'attributes') --}}
+        </div>
+        <div class="col-md-12">
+          <input type="file" name="profile_image" id="profile-image">
         </div>
         <div class="submit col-md-12">
             <button type="submit" id="form_button">

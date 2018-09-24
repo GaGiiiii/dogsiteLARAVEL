@@ -37,11 +37,11 @@
                           }
                           // posle sestog page postaje 2 
                         ?>
-                        <tr>
-                          @if($dog->user_id == $data['user']->id)
-                            <td><a href="{{url('/dogs')}}/{{$dog->id}}?page=<?php echo $page; ?>">{{$dog->breed}}</a></td>
-                          @endif
-                        </tr>
+                        @if($dog->user_id == $data['user']->id)
+                          <tr>
+                              <td><a href="{{url('/dogs')}}/{{$dog->id}}?page=<?php echo $page; ?>">{{$dog->breed}}</a></td>
+                          </tr>
+                        @endif
                         @endforeach
                       </table>
                   @else

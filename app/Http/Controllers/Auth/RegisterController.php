@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class RegisterController extends Controller
 {
@@ -53,6 +55,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'profile_image' => 'image|nullable|max:2999',
         ]);
     }
 
@@ -64,10 +67,32 @@ class RegisterController extends Controller
      */
     protected function create(array $data){
       Session::flash('userRegister', 'Your registration was successfull. <i class="fa fa-check" aria-hidden="true"></i> Welcome ' . $data['name']);
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+
+      // Handle Image Upload
+      if($data['profile_image']){
+        // Get filename with the extension
+        $fileNameWithExt = $data['profile_image']->getClientOriginalName();
+        // Get just filename
+        $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+        // Get just ext
+        $extension = $data['profile_image']->getClientOriginalExtension();
+        // Filename to store 
+        $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+        // Upload Image 
+        // $path = $data['profile_image']->storeAs('public/profile_images', $fileNameToStore);
+
+
+        $file = $data['profile_image'];
+        Storage::disk('uploads')->put('profile_images/' . $fileNameToStore, File::get($file));
+      }else{
+        $fileNameToStore = 'noimage.jpg';
+      }
+
+      return User::create([
+          'name' => $data['name'],
+          'email' => $data['email'],
+          'password' => Hash::make($data['password']),
+          'profile_image' => $fileNameToStore,
+      ]);
     }
 }
