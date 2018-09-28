@@ -45,7 +45,7 @@ class DogsController extends Controller{
 
   public function store(Request $request){
     $this->validate($request, [
-      'breed' => 'required|alpha_num',
+      'breed' => 'required',
       'description' => 'required|min:100',
       'breed_image' => 'image|nullable|max:2999'
     ]);
@@ -71,9 +71,12 @@ class DogsController extends Controller{
     }
 
     // Create Breed
+
+    $breedName = $request->input('breed');
+    $breedName = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $breedName);
     
     $breed = new Dog;
-    $breed->breed = $request->input('breed');
+    $breed->breed = $breedName;
     $breed->description = $request->input('description');
     $breed->user_id = auth()->user()->id;
     $breed->breed_image = $fileNameToStore;
@@ -105,7 +108,7 @@ class DogsController extends Controller{
 
   public function update(Request $request, $id){
     $this->validate($request, [
-      'breed' => 'required|alpha_num',
+      'breed' => 'required',
       'description' => 'required|min:100',
       'breed_image' => 'image|nullable|max:2999'
     ]);
@@ -131,9 +134,13 @@ class DogsController extends Controller{
     }
 
     // Update Breed
+
+    $breedName = $request->input('breed');
+    $breedName = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $breedName);
+
     
     $breed = Dog::find($id);
-    $breed->breed = $request->input('breed');
+    $breed->breed = $breedName;
     $breed->description = $request->input('description');
     if($request->hasFile('breed_image')){
       Storage::disk('uploads')->delete('breed_images/' . $breed->breed_image);

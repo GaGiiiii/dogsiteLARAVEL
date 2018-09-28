@@ -44,6 +44,7 @@
           {{-- (name, value, 'attributes') --}}
         </div>
         <div class="col-md-12">
+          Upload Image
           <input type="file" name="profile_image" id="profile-image">
         </div>
         <div class="submit col-md-12">
