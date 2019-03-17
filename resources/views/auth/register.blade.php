@@ -15,11 +15,11 @@
         <div class="col-md-12">        
           <input id="name_input" placeholder="Name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
           {{-- (name, value, 'attributes') --}}
-          {{-- @if ($errors->has('name'))
+          @if ($errors->has('name'))
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $errors->first('name') }}</strong>
               </span>
-          @endif --}}
+          @endif
         </div>
         <div class="col-md-12">        
           <input id="email" type="email" placeholder="Email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>

@@ -44,8 +44,8 @@
                   <div class="JSMessageComment"></div>
                   @foreach($dog->comments as $comment)
                     <article>
-                      <a href="{{url('/profile')}}/{{$comment->user->id}}"><img class="profile-photo" src="{{url('/uploads')}}/profile_images/{{$comment->user->profile_image}}"></a>  
                       {{-- <a href="{{url('/profile')}}/{{$comment->user->id}}"><img class="profile-photo" src="https://en.gravatar.com/userimage/18343163/3fd908393aedf6423ec12cacec9a1f50.jpg?size=200"></a>   --}}
+                      <a href="{{url('/profile')}}/{{$comment->user->id}}"><img class="profile-photo" src="{{url('/uploads')}}/profile_images/{{$comment->user->profile_image}}"></a>  
                       <h4><a href="{{url('/profile')}}/{{$dog->user->id}}">{{$comment->user->name}}</a></h4>
                       <time>{{time_elapsed_string($comment->created_at)}}</time>
                       {{-- <time>5 months ago</time> --}}

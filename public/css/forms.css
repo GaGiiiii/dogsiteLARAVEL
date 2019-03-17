@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-/* ********************** CSS FOR FORMS START ************************ */
-
 html {
   font-family: 'Montserrat', Arial, sans-serif;
   -ms-text-size-adjust: 100%;
@@ -243,8 +241,6 @@ p.p-error, p.p-success{
 .forgotPW-link{
   padding: 1rem 0 0 0;
 }
-
-/* ********************** MEDIA START ************************ */
 
 @media screen and (max-width: 768px) {
   #container {

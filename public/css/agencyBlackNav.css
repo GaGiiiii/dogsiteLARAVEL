@@ -498,7 +498,7 @@ section#contact .text-danger {
   color: #e74c3c;
 }
 
-/* ********************** BREEDS START ************************ */
+/* BREEDS */
 
 .blog_news .blog_img img {
   height: 230px;
@@ -690,10 +690,9 @@ a.blog_link:hover {
   display: none;
 }
 
-/* ********************** BREEDS END ************************ */
 
 
-/* ********************** CUSTOM CSS START ************************ */
+/* CUSTOM CSS */
 
 .breed-image:hover{
   opacity: 0.9;
@@ -856,7 +855,7 @@ article time, article:hover time,
   color: red;
 }
 
-/* ********************** NAVBAR DROP DOWN LINK ************************ */
+/* NAVBAR DROP DOWN LINK */
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
   background-color: #222;
@@ -882,7 +881,7 @@ a.dropdown-link {
   }
 }
 
-/* ********************** LOGIN/LOGOUT MESSAGES ************************ */
+/* LOGIN LOGOUT MESSAGES */
 
 .login-logout-message, .register-message{
   position: fixed;
@@ -892,14 +891,16 @@ a.dropdown-link {
   right: -300px;
 }
 
-/* ********************** REGISTER MESSAGE ************************ */
+/* REGISTER MESSAGE */
 
 .register-message{
   width: 290px;
   right: -380px;
 }
 
-/* ********************** MODAL FOR DELETE ************************ */
+/* MODAL FOR DELETE */
+
+
 
 /* Outer */
 .popup {
@@ -955,7 +956,7 @@ a.dropdown-link {
 	text-decoration:none;
 }
 
-/* ********************** LIKES ************************ */
+/* LIKES */
 
 .liked{
   color: red;

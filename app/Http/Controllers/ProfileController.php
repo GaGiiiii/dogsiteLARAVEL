@@ -43,6 +43,7 @@ class ProfileController extends Controller
         'user' => $user,
         'dogs' => $dogs
       ];
+      
       return view('users/show')->with('data', $data);
     }
 }

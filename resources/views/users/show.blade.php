@@ -12,7 +12,7 @@
                   @if(count($data['user']->dogs) > 0)
                     <table class="table table-striped">
                         <tr>
-                          <th>Title</th>
+                          <th>Dogs</th>
                         </tr>
                         <?php
                           $dogNumber = 0;
@@ -39,7 +39,7 @@
                         ?>
                         @if($dog->user_id == $data['user']->id)
                           <tr>
-                              <td><a href="{{url('/dogs')}}/{{$dog->id}}?page=<?php echo $page; ?>">{{$dog->breed}}</a></td>
+                            <td><a href="{{url('/dogs')}}/{{$dog->id}}?page=<?php echo $page; ?>">{{$dog->breed}}</a></td>
                           </tr>
                         @endif
                         @endforeach

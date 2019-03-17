@@ -26,20 +26,18 @@ Route::get('/services', 'PagesController@services');
 Route::get('/credits', 'PagesController@credits');
 Route::post('/contact', 'ContactController@store');
 
-/* ********************** DOG ROUTES START ************************ */
+// Dog routes
 
+// Route::resource('dogs', 'DogsController');
 Route::get('/', 'DogsController@index');
-Route::post('/', 'DogsController@store');
+Route::post('/public', 'DogsController@store');
 Route::get('/dogs/create', 'DogsController@create');
 Route::get('/dogs/{dog}', 'DogsController@show');
 Route::put('/dogs/{dog}', 'DogsController@update');
 Route::delete('/dogs/{dog}', 'DogsController@destroy');
 Route::get('/dogs/{dog}/edit', 'DogsController@edit');
 
-/* ********************** DOG ROUTES END ************************ */
-
-
-/* ********************** COMMENT ROUTES START ************************ */
+// Comment routes
 
 // Route::resource('comments', 'CommentsController');
 // Route::get('/', 'CommentsController@index');
@@ -50,18 +48,12 @@ Route::put('/dogs/{dog}/comments/{comment}', 'CommentsController@update');
 Route::delete('/dogs/{dog}/comments/{comment}', 'CommentsController@destroy');
 // Route::get('/dogs/{dog}/edit', 'CommentsController@edit');
 
-/* ********************** COMMENT ROUTES END ************************ */
-
-
-/* ********************** LIKE ROUTES ************************ */
+// Like routes
 
 Route::post('/dogs/{dog}/comments/{comment}/like', 'LikesController@index');
 
-/* ********************** AUTH ROUTES ************************ */
 
 Auth::routes();
-
-/* ********************** USER ROUTES ************************ */
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::get('/profile/{user}', 'ProfileController@profile');

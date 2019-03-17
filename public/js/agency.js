@@ -1,7 +1,7 @@
+// Agency Theme JavaScript
+
 (function($) {
     "use strict"; // Start of use strict
-
-    /* ********************** THEME JS START ************************ */
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
@@ -41,10 +41,7 @@
       }
     });
 
-    /* ********************** THEME JS START ************************ */
-
-
-    /* ********************** DELETE MODAL START ************************ */
+    // DELETE MODAL
 
     $(function() {
       //----- OPEN
@@ -64,11 +61,7 @@
       });
     });
 
-    /* ********************** DELETE MODAL END ************************ */
-
-
-    /* ********************** REMOVE SCRIPT FORM CONTACT FORM START ************************ */
-
+    // REMOVE SCRIPT FROM CONTACT !!!
 
     $("#contactForm").submit(function(e){
             
@@ -88,9 +81,7 @@
       return true;
     });
 
-    /* ********************** REMOVE SCRIPT FROM CONTACT END ************************ */
-
-    /* ********************** SHOW BREED FROM PROFILE PAGE REDIRECT START ************************ */
+    // SHOW BREED FROM PROFILE PAGE REDIRECT !!!
 
     $(window).on('load',function(){
       var pathname = window.location.pathname; // Returns path only
@@ -107,18 +98,10 @@
       var last_part2 = parts2[0];
       // alert(last_part2);
 
-      if(pathname == '/dogs/' + last_part2){
+      if(pathname == '/projects/DogSite/public/dogs/' + last_part2){
         $('.dogid' + last_part2).modal('show');
       }
     });
-
-    /* ********************** SHOW BREED FROM PROFILE PAGE REDIRECT END ************************ */
-
-
-
-
-
-
 
     // LIKES
 

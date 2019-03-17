@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+/*    font-family: 'Source Sans Pro', sans-serif;
+    outline: none!important;*/
+}
+
+.show-a {
+  text-decoration: none!important;
+}
+
+/*body {*/
+/*  overflow-x: hidden;*/
+/*}*/
+
+.show-ul {
+  list-style: none;
+  margin: 0px;
+}
+
+.show-p {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+}
+
+
+.wrapper {
+  text-align: left;
+}
+
+#blog .tabs {
+  list-style: none;
+  margin-top: 0px;
+}
+
+#blog .tabs li {
+  display: block;
+  text-align: left;
+  margin-bottom: 29px;
+}
+
+
+#blog .tabs .active {
+  background-color: #46bae2;
+  color: #fff!important;
+}
+#blog .tabs .active .info-post li {
+  color: #fff!important;
+}
+#blog .tabs .active .info-post li i {
+  color: #fff!important;
+}
+
+#blog {
+  padding-bottom: 80px;
+}
+
+#blog .info-post li {
+  display: inline;
+  margin-right: 15px;
+}
+
+#blog .info-post li {
+  color: #343434;
+  font-size: 15px;
+  font-weight: 300;
+  /*text-transform: capitalize;*/
+}
+
+#blog .info-post li i {
+  color: #46bae2;
+  margin-right: 5px;
+}
+
+.tabgroup .text-content  {
+  background-color: #fff;
+  color: #fff;
+  padding: 25px;
+  text-align: left;
+  margin-top: -10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  box-shadow: 0px 0px 10px #cdcdcd;
+}
+.tabgroup .text-content h4 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #00b7ef;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.modal h4{
+  color: black !important;
+  text-transform: none !important; 
+  margin-bottom: 0px !important;
+}
+
+.tabgroup .text-content h5 {
+  font-size: 20px;
+  font-weight: 400;
+  /*text-transform: uppercase;*/
+  letter-spacing: 0.5px;
+  color: #00b7ef;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.tabgroup .text-content span {
+  font-size: 13px;
+  color: #33c1cf;
+}
+
+.tabgroup .text-content p {
+  margin-top: 17px;
+  color: #7a7a7a;
+}
+
+#first-tab-group {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#first-tab-group img {
+  width: 100%;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.deleteForm{
+  display: inline;
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.show-breed-col{
+  margin: 0 auto;
+  float: none;
+}
+
+
+/* ********************** LIKE START ************************ */
+
+
+#blog .info-post li i.fa-thumbs-up, #blog .info-post li i.fa-thumbs-down {
+  color: black;
+}
+
+button.like-input, button.like-comment-input, button.dislike-input, button.dislike-comment-input{
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#display-likes, #display-dislikes{
+  color: black;
+  font-weight: 700;
+}
+
+input.like-input, input.like-input-loggedOut, input.like-comment-input, input.like-comment-input-loggedOut{
+  background: url('https://image.flaticon.com/icons/png/128/25/25423.png') no-repeat;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 40% 40%;
+}
+
+input.dislike-input, input.dislike-input-loggedOut, input.dislike-comment-input, input.dislike-comment-input-loggedOut{
+  background: url('http://www.sma-syndicat.org/wp-content/uploads/intense-cache/icons/plugin/font-awesome/thumbs-down.svg') no-repeat;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 20% 40%;
+}
+
+.liked{
+  color: #05c12b !important;
+}
+
+.disliked{
+  color: #e51b04 !important;
+}
+
+#login-register-modal-id h4{
+  letter-spacing: 0px !important;
+}
+
+.highlight{
+  border: 10px solid #e2e0e0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+/* ********************** LIKE END ************************ */
+
+/* ********************** BACK TO TOP START ************************ */
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    font-size: 20px;
+}
+#back-to-top:hover {
+    background: #e9ebec;
+}
+#back-to-top.show {
+    opacity: 1;
+}
+#content {
+    height: 2000px;
+}
+
+/* ********************** BACK TO TOP END ************************ */
+
+
