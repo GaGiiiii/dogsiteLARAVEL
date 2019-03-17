@@ -98,7 +98,8 @@
       var last_part2 = parts2[0];
       // alert(last_part2);
 
-      if(pathname == '/projects/DogSite/public/dogs/' + last_part2){
+      //if(pathname == '/projects/DogSite/public/dogs/' + last_part2){
+      if(pathname == '/dogs/' + last_part2){
         $('.dogid' + last_part2).modal('show');
       }
     });
