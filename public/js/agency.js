@@ -87,7 +87,7 @@
       var pathname = window.location.pathname; // Returns path only
       //  var url      = window.location.href;     // Returns full URL
       // var origin   = window.location.origin;   // Returns base URL
-      // alert(pathname)
+       alert(pathname)
 
       var url = $(location).attr('href');
       var parts = url.split("/");
@@ -96,7 +96,7 @@
       
       var parts2 = last_part.split('?');
       var last_part2 = parts2[0];
-      // alert(last_part2);
+       alert(last_part2);
 
       //if(pathname == '/projects/DogSite/public/dogs/' + last_part2){
       if(pathname == '/dogs/' + last_part2){
