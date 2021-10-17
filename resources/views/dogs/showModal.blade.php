@@ -17,7 +17,7 @@
                 <!-- Breed Details Go Here -->
                 <h2 class="breed-name"><?php echo $dogs[$index]->breed; ?></h2>
                 {{-- <img class="img-responsive img-centered" src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Common-dog-behaviors-explained.jpg?itok=FSzwbBoi" alt=""> --}}
-                <img src="{{url('/uploads')}}/breed_images/{{$dog->breed_image}}" class="breed-image-modal" alt="{{url('/uploads')}}/breed_images/no_image.png">
+                <img src="{{url('/uploads')}}/breed_images/{{$dog->breed_image ?? 'no_image.png'}}" class="breed-image-modal" alt="{{url('/uploads')}}/breed_images/no_image.png">
                 <ul class="list-inline">
                   <li>Date: <?php echo convert_date($dog->created_at); ?></li>
                   {{-- <li>Date: July 2014</li> --}}
